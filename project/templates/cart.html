@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footwear Cart</title>
+
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        .cart-header {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .cart-container {
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-top: 40px;
+            border-radius: 15px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .item-details {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .item-name {
+            font-size: 1.3rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .item-price {
+            color: #f39c12;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+
+        .item-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .quantity-selector input {
+            width: 50px;
+            height: 35px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 1rem;
+            border-radius: 8px;
+        }
+
+        .remove-btn {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .remove-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .discount-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .discount-section input {
+            width: 60%;
+            padding: 10px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            margin-right: 10px;
+        }
+
+        .apply-discount-btn {
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            background-color: #00b894;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .apply-discount-btn:hover {
+            background-color: #0984e3;
+        }
+
+        .checkout-section {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .total-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .checkout-btn {
+            background-color: #f39c12;
+            color: white;
+            font-size: 1.2rem;
+            padding: 12px 25px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .checkout-btn:hover {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="cart-header">
+            Your Cart
+        </div>
+
+        <div class="cart-container">
+            <!-- Cart Item 1 -->
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/80" alt="Shoe Image">
+                <div class="item-details">
+                    <div class="item-name">Men's Running Shoes</div>
+                    <div class="item-price">$79.99</div>
+                </div>
+                <div class="item-actions">
+                    <div class="quantity-selector">
+                        <button class="btn btn-light">-</button>
+                        <input type="number" value="1" min="1" readonly>
+                        <button class="btn btn-light">+</button>
+                    </div>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+            <!-- Cart Item 2 -->
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/80" alt="Boots Image">
+                <div class="item-details">
+                    <div class="item-name">Women's Casual Boots</div>
+                    <div class="item-price">$119.99</div>
+                </div>
+                <div class="item-actions">
+                    <div class="quantity-selector">
+                        <button class="btn btn-light">-</button>
+                        <input type="number" value="1" min="1" readonly>
+                        <button class="btn btn-light">+</button>
+                    </div>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+            <!-- Discount Section -->
+            <div class="discount-section">
+                <input type="text" placeholder="Enter discount code" />
+                <button class="apply-discount-btn">Apply Code</button>
+            </div>
+
+            <!-- Checkout Section -->
+            <div class="checkout-section">
+                <div class="total-price">Total: $199.98</div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

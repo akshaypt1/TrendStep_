@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Footwear - Product Detail</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Rokkitt:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS (optional) -->
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .breadcrumb {
+      background-color: transparent;
+    }
+    .product-entry {
+      position: relative;
+    }
+    .product-entry img {
+      width: 100%;
+    }
+    .product-desc h3 {
+      font-size: 24px;
+    }
+    .product-desc .price {
+      font-size: 20px;
+    }
+    .product-desc .size-wrap ul {
+      padding-left: 0;
+      list-style: none;
+    }
+    .product-desc .size-wrap ul li {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .product-desc .input-group {
+      width: 150px;
+    }
+    .input-group-btn button {
+      padding: 10px;
+    }
+    .addtocart a {
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: #007bff;
+      color: white;
+    }
+    .nav-pills .nav-link.active {
+      background-color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-4">
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Trendstep</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="men.html">Men</a></li>
+        <li class="nav-item"><a class="nav-link" href="women.html">Women</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html">Cart [0]</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Product Details</li>
+    </ol>
+  </nav>
+
+  <!-- Product Detail Section -->
+  <div class="row">
+    <div class="col-lg-8">
+      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/item-1.jpg" class="d-block w-100" alt="Product Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/item-2.jpg" class="d-block w-100" alt="Product Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/item-3.jpg" class="d-block w-100" alt="Product Image 3">
+          </div>
+          <div class="carousel-item">
+            <img src="images/item-4.jpg" class="d-block w-100" alt="Product Image 4">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="product-desc">
+        <h3>Women's Boots Shoes Maca</h3>
+        <p class="price">
+          <span>$68.00</span> 
+          <span class="rate">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            (74 Rating)
+          </span>
+        </p>
+        <p>Even the all-powerful Pointing has no control over the blind texts. It is an almost unorthographic life...</p>
+
+        <!-- Size & Width Selection -->
+        <div class="size-wrap mb-3">
+          <h4>Size</h4>
+          <ul>
+            <li><a href="#">small</a></li>
+            <li><a href="#">7.5</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">8.5</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">9.5</a></li>
+            <li><a href="#">10</a></li>
+          </ul>
+        </div>
+
+        <div class="size-wrap mb-3">
+          <h4>Width</h4>
+          <ul>
+            <li><a href="#">M</a></li>
+            <li><a href="#">W</a></li>
+          </ul>
+        </div>
+
+        <!-- Quantity -->
+        <div class="input-group mb-3">
+          <button class="btn btn-outline-secondary" type="button">-</button>
+          <input type="text" class="form-control" value="1" min="1" max="100">
+          <button class="btn btn-outline-secondary" type="button">+</button>
+        </div>
+
+        <!-- Add to Cart -->
+        <p class="addtocart"><a href="cart.html" class="btn btn-primary"><i class="bi bi-cart-fill"></i> Add to Cart</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Tabs (Description, Manufacturer, Reviews) -->
+  <div class="mt-5">
+    <ul class="nav nav-pills mb-3" id="productTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="description-tab" data-bs-toggle="pill" href="#description" role="tab" aria-controls="description">Description</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="manufacturer-tab" data-bs-toggle="pill" href="#manufacturer" role="tab" aria-controls="manufacturer">Manufacturer</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="review-tab" data-bs-toggle="pill" href="#review" role="tab" aria-controls="review">Review</a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="productTabsContent">
+      <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+        <p>Even the all-powerful Pointing has no control over the blind texts...</p>
+      </div>
+      <div class="tab-pane fade" id="manufacturer" role="tabpanel" aria-labelledby="manufacturer-tab">
+        <p>Details about the manufacturer...</p>
+      </div>
+      <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+        <h5>23 Reviews</h5>
+        <p><strong>Jacob Webb</strong> - 14 March 2018</p>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>Great product! Comfortable and stylish.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS (necessary for functionality) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
