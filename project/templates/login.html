@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShoeStore Login</title>
@@ -13,7 +14,7 @@
         body {
             background-color: #f4f4f4;
             font-family: 'Poppins', sans-serif;
-            background-image: url(../static/images/loginpage.jpg);
+            background-image: url("{%static 'images/loginpage.jpg'%}");
             background-size: cover;
             background-position: center;
         }
@@ -31,8 +32,8 @@
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 400px;
-            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-            backdrop-filter: blur(10px); /* Blurring effect */
+            background-color: rgba(32, 32, 32, 0.2); /* Semi-transparent background */
+            backdrop-filter: blur(3px); /* Blurring effect */
             -webkit-backdrop-filter: blur(10px); /* For Safari support */
             border: 1px solid rgba(255, 255, 255, 0.3); /* Optional border for better visibility */
         }
@@ -80,11 +81,12 @@
 </head>
 
 <body>
+    {% csrf_token %}
 
     <div class="login-container">
         <div class="login-form">
             <h2>Welcome to TrendStep</h2>
-            <form action="/login" method="POST">
+            <form action="../" method="POST">
                 <!-- Username Field -->
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
