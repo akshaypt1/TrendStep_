@@ -44,3 +44,6 @@ def signup_view(request):
 
 def home_view(request):
     return render(request, 'homepage.html')
+def product(request):
+     return render(request, 'homepage.html')
+    
