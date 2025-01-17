@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footwear Cart</title>
@@ -12,6 +13,9 @@
     <!-- Custom Styles -->
     <style>
         body {
+            background-image: url("{%static 'images/loginpage.jpg'%}");
+            background-size: cover;
+            background-position: center;
             font-family: 'Roboto', sans-serif;
             background-color: #f4f6f9;
             color: #333;
@@ -21,7 +25,7 @@
             text-align: center;
             margin-top: 60px;
             font-size: 2.5rem;
-            color: #333;
+            color: #ffffff;
         }
 
         .cart-container {
@@ -174,10 +178,10 @@
         <div class="cart-container">
             <!-- Cart Item 1 -->
             <div class="cart-item">
-                <img src="https://via.placeholder.com/80" alt="Shoe Image">
+                <img src="{% static 'images/item-1.jpg' %}" alt="Shoe Image">
                 <div class="item-details">
-                    <div class="item-name">Men's Running Shoes</div>
-                    <div class="item-price">$79.99</div>
+                    <div class="item-name">Women's Boots Shoes Maca</div>
+                    <div class="item-price">$68.00</div>
                 </div>
                 <div class="item-actions">
                     <div class="quantity-selector">
@@ -191,7 +195,7 @@
 
             <!-- Cart Item 2 -->
             <div class="cart-item">
-                <img src="https://via.placeholder.com/80" alt="Boots Image">
+                <img src="{% static 'images/item-10.jpg' %}" alt="Boots Image">
                 <div class="item-details">
                     <div class="item-name">Women's Casual Boots</div>
                     <div class="item-price">$119.99</div>

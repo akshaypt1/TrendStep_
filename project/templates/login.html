@@ -81,12 +81,12 @@
 </head>
 
 <body>
-    {% csrf_token %}
 
     <div class="login-container">
         <div class="login-form">
             <h2>Welcome to TrendStep</h2>
             <form action="../" method="POST">
+                {% csrf_token %}
                 <!-- Username Field -->
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>

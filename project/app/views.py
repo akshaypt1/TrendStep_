@@ -13,7 +13,7 @@ def login_view(request):
             user = User.objects.get(username=username)
             if check_password(password, user.password):
                 # If login is successful, redirect to home page
-                return redirect('home')  # Replace 'home' with your actual home page URL
+                return redirect('home_view')  # Replace 'home' with your actual home page URL
             else:
                 messages.error(request, "Invalid password")
         except User.DoesNotExist:
@@ -38,12 +38,15 @@ def signup_view(request):
             # Create new user
             User.objects.create(username=username, email=email, password=hashed_password)
             messages.success(request, "Account created successfully! Please log in.")
-            return redirect('login')  # Redirect to login page after successful sign up
+            return redirect('login_view')  # Redirect to login page after successful sign up
     
-    return render(request, 'sign.html')
+    return render(request,'sign.html')
 
 def home_view(request):
-    return render(request, 'homepage.html')
-def product(request):
-     return render(request, 'homepage.html')
+    return render(request,'homepage.html')
+def product_view(request):
+     return render(request,'product.html')
+def cart_view(request):
+     return render(request,'cart.html')
+ 
     
