@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import User
 from django.contrib.auth.hashers import make_password, check_password  # For password hashing
+from .models import Product
+from django.shortcuts import render, get_object_or_404
 
 # Login view
 def login_view(request):
@@ -13,7 +15,7 @@ def login_view(request):
             user = User.objects.get(username=username)
             if check_password(password, user.password):
                 # If login is successful, redirect to home page
-                return redirect('home_view')  # Replace 'home' with your actual home page URL
+                return redirect('home')  # Replace 'home' with your actual home page URL
             else:
                 messages.error(request, "Invalid password")
         except User.DoesNotExist:
@@ -42,11 +44,20 @@ def signup_view(request):
     
     return render(request,'sign.html')
 
-def home_view(request):
-    return render(request,'homepage.html')
-def product_view(request):
-     return render(request,'product.html')
+def home(request):
+    products = Product.objects.all()[:3]  # Limits to 6 products
+    return render(request, "homepage.html", {"products": products})
+def product_view(request,product_id):
+    product = get_object_or_404(Product, id=product_id)
+    return render(request, 'product_detail.html', {'product': product})
+
 def cart_view(request):
      return render(request,'cart.html')
+def men(request):
+    products = Product.objects.all()
+    return render(request,'man.html',{"products": products})
+def women(request):
+    products = Product.objects.all()
+    return render(request,'moman.html',{"products": products})
  
     
