@@ -65,16 +65,19 @@
         .footer-text {
             text-align: center;
             margin-top: 20px;
-            color: #888;
+            color: #f0ebeb;
         }
 
         .footer-text a {
-            color: #d35400;
+            color: #f44906;
             text-decoration: none;
         }
 
         .footer-text a:hover {
             text-decoration: underline;
+        }
+        .form-label{
+            color: white;
         }
     </style>
 </head>
@@ -104,7 +107,7 @@
                <button type="submit" class="btn btn-primary">Sign Up</button>
             </form>
             <div class="footer-text">
-                <p>Already have an account? <a href="login">Log in here</a></p>
+                <p>Already have an account? <a href="{% url 'login_view' %}">Log in here</a></p>
             </div>
         </div>
     </div>

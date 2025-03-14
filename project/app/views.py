@@ -58,6 +58,6 @@ def men(request):
     return render(request,'man.html',{"products": products})
 def women(request):
     products = Product.objects.all()
-    return render(request,'moman.html',{"products": products})
+    return render(request,'woman.html',{"products": products})
  
     

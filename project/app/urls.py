@@ -6,7 +6,7 @@ from .views import home, product_view
 
 urlpatterns = [
     path('',views.login_view,name='login_view'),
-    path('sign/',views.signup_view),
+    path('sign/',views.signup_view,name='sign'),
     path('home/', views.home, name='home'),
     path('home/product/',views.product_view),
     path('product/<int:product_id>/',views.product_view, name='product_detail'),
